@@ -1,0 +1,49 @@
+.collection-item {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  align-items: center;
+  position: relative;
+}
+.collection-item .image {
+  width: 100%;
+  height: 95%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 5px;
+}
+.collection-item .custom-button {
+  width: 80%;
+  opacity: 0.7;
+  position: absolute;
+  top: 255px;
+  display: none;
+}
+.collection-item:hover .image {
+  opacity: 0.8;
+}
+.collection-item:hover .custom-button {
+  opacity: 1;
+  display: flex;
+  border: 1px solid #ff7878;
+  background-color: #cee5d0;
+  color: #ff7878;
+  font-weight: bold;
+}
+.collection-item .collection-footer {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.collection-item .collection-footer .name {
+  width: 90%;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.collection-item .collection-footer .price {
+  width: 10%;
+  font-weight: bold;
+}

@@ -2,47 +2,46 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-
-
 import {auth} from '../../firebase/firebase.utils.js';
-import { ReactComponent as Logo } from '../../assets/crown.svg';
-import CartIcon from '../cart-icon/cart-icon.component';
-import CartDropdown from '../cart-dropdown/cart-dropdown.component.jsx';
 import { selectCartHidden } from '../../redux/cart/cart.selectors.js';
 import { selectCurrentUser } from '../../redux/user/user.selector.js';
-
-import './header.styles.scss';
+import styles from './header.module.css';
+import { IconButton } from '@mui/material';
+import { Home, ShoppingCart } from '@mui/icons-material';
 
 const Header = ({ currentUser, hidden }) => (
-  <div className="header">
-    <Link className="logo-container" to="/">
-      <Logo className="logo" />
+  <div className={styles.header}>
+    <Link to="/shop">
+        <IconButton style={{margin:"10px"}}>
+          <Home fontSize="large" style={{color:"#FF7878"}}/>
+        </IconButton>
     </Link>
 
-    <div className="options">
-      <Link className="option" to="/shop">
-        SHOP
-      </Link>
-
-      <Link className="option" to="/shop">
-        CONTACT
+    <div className={styles.options}>
+      <Link className={styles.option} to="/shop">
+        <h2>
+          SHOP
+        </h2>
       </Link>
       {currentUser ? (
-        <div className="option" onClick={() => auth.signOut()}>
-          SIGN OUT
+        <div className={styles.option} onClick={() => auth.signOut()}>
+          <h2>
+            SIGN OUT
+          </h2>
         </div>
       ) : (
-        <Link className="option" to="/signin">
-          SIGN IN
+        <Link className={styles.option} to="/signin">
+          <h2>
+            SIGN IN
+          </h2>
         </Link>
       )}
-      <CartIcon />
+      <Link to="/checkout">
+        <IconButton>
+          <ShoppingCart fontSize="large" style={{color:"#FF7878"}}/>
+        </IconButton>
+      </Link>
     </div>
-    {
-        hidden ? null:
-        <CartDropdown />
-    }
-        <p className= king>&#169 2021</p>
   </div>
 );
 

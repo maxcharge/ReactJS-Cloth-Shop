@@ -1,9 +1,9 @@
+import { Button } from '@mui/material';
 import React from 'react';
 import { connect } from 'react-redux';
-import CustomButton from '../custom-button/custom-button.component.jsx';
 import { addItem }from '../../redux/cart/cart.actions.js';
 
-import './collection-item.styles.scss';
+import './collection-item.css';
 
 
 const CollectionItem = ({item, addItem}) => {
@@ -21,7 +21,7 @@ const CollectionItem = ({item, addItem}) => {
           <span className="price"> {price} </span>
         </div>
 
-        <CustomButton onClick={ () =>  addItem(item)} inverted>Add to cart</CustomButton>
+        <Button className="custom-button" variant="contained" onClick={ () =>  addItem(item)}>Add to cart</Button>
       </div>
     );
 }

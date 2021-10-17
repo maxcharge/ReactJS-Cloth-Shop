@@ -1,0 +1,12 @@
+.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+  color: #FF7878;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+
+

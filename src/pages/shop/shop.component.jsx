@@ -1,8 +1,8 @@
 import React from 'react';
-import CollectionsOverview from '../../components/collections-overview/collections-overview.component'
+import CollectionsOverview from '../../components/collections-overview/collections-overview'
 
 const ShopPage = ({ collections }) => (
-    <div className='shop-page'>
+    <div style={{margin:"20px",color:"#FF7878"}} className='shop-page'>
         <CollectionsOverview />
     </div>
 )
