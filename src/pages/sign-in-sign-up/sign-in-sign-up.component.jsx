@@ -11,6 +11,7 @@ import TabPanel from "@mui/lab/TabPanel";
 import { Tab, TextField } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { LoadingButton } from "@mui/lab";
+import './sign.css'
 
 const useStyles = makeStyles({
     root: {
@@ -93,7 +94,7 @@ const SignUp = () => {
                         }}
                         centered
                     >
-                        <Tab label="Sign Up" className={classes.root} value={1} sx={{ color: "#FF7878" }} />
+                        <Tab label="Sign Up" value={1} sx={{ color: "#FF7878" }} />
                         <Tab label="Sign In" value={2} sx={{ color: "#FF7878" }} />
                     </TabList>
                 </Box>
