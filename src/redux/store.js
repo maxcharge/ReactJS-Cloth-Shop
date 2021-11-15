@@ -12,4 +12,5 @@ if (process.env.NODE_ENV !== 'production' && !process.env.STORE_LOG_DISABLE) {
 export const store = createStore(rootReducer, applyMiddleware(...middlewares));
 export const persistor = persistStore(store);
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default { store, persistor };
