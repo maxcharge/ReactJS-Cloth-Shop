@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
     auth,
     createUserProfileDocument,
-    signInWithGoogle,
 } from "../../firebase/firebase.utils.js";
 import { Box } from "@mui/system";
 import TabContext from "@mui/lab/TabContext";
@@ -177,14 +176,6 @@ const SignUp = () => {
                         load
                     >
                         SIGN IN
-                    </LoadingButton>
-                    <LoadingButton
-                        loading={loading}
-                        variant="contained"
-                        onClick={signInWithGoogle}
-                        style={{ backgroundColor: "#E0C097", margin: "20px" }}
-                    >
-                        GOOGLE SIGN IN
                     </LoadingButton>
                 </TabPanel>
             </TabContext>
