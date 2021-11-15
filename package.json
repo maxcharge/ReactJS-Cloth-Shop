@@ -17,7 +17,6 @@
     "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
     "enzyme": "^3.11.0",
     "firebase": "^7.24.0",
-    "node-sass": "^4.13.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
@@ -25,7 +24,9 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
-    "reselect": "^4.0.0"
+    "reselect": "^4.0.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0"
   },
   "devDependencies": {
     "react-scripts": "^4.0.1"
